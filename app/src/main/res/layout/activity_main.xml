@@ -23,64 +23,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </android.support.v4.view.ViewPager>
-
-    <ViewFlipper
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/viewFlipper"
-        android:layout_gravity="center_vertical">
-
-        <ScrollView
-            android:id="@+id/layout_types"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical">
-
-            <include layout="@layout/type_activity"/>
-        </ScrollView>
-
-        <ScrollView
-            android:id="@+id/arrays"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical">
-
-            <include layout="@layout/array_activity"/>
-        </ScrollView>
-
-        <ScrollView
-            android:id="@+id/loops"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical">
-
-            <include layout="@layout/loop_activity"/>
-        </ScrollView>
-
-        <ScrollView
-            android:id="@+id/decisions_struct"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical">
-
-            <include layout="@layout/decision_struct_activity"/>
-        </ScrollView>
-
-        <ScrollView
-            android:id="@+id/layout_input"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical">
-
-            <include layout="@layout/input_activity"/>
-        </ScrollView>
-
-
-    </ViewFlipper>
+    <include android:id="@+id/content" layout="@layout/home_activity"/>
+             
 
 </LinearLayout>
