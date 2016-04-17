@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context="ytallo.layon.gdg.study.view.JavaActivity">
 
+    <android.support.design.widget.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            layout="@layout/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </android.support.design.widget.AppBarLayout>
+
     <TabHost
         android:id="@+id/tabHost"
         android:layout_width="match_parent"

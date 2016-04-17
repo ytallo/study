@@ -12,12 +12,12 @@ import ytallo.layon.gdg.study.R;
 /**
  * Created by Ytallo on 16/04/2016.
  */
-public class JavaActivity extends AppCompatActivity {
+public class JavaActivity extends DefualtActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.java_activity);
+        super.onDefaultCreate(savedInstanceState);
 
         TabHost host = (TabHost) findViewById(R.id.tabHost);
         host.setup();
@@ -26,6 +26,16 @@ public class JavaActivity extends AppCompatActivity {
         spec.setContent(R.id.tab1);
         spec.setIndicator("Tipos");
         host.addTab(spec);
+    }
+
+    @Override
+    public int getToolbarResourceId() {
+        return R.id.toolbar;
+    }
+
+    @Override
+    public int getLayoutResourceId() {
+        return R.layout.java_activity;
     }
 
 }
