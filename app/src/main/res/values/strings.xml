@@ -10,7 +10,7 @@
     <string name="c_more">C++</string>
 
     <string name="types">Tipos primitivos e valores</string>
-    <string name="description_types">Aqui ficará o conteúdo de tipos</string>
+    <string name="description_types">Como tipos primitivos entendemos aqueles tipos de informação mais usuais e básicos. São os habituais de outras linguagens de programação. Descreveremos algum dado para ter em conta em cada tipo.</string>
 
     <string name="decisions_struct">Estrutura de decisão</string>
 
