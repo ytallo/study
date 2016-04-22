@@ -10,6 +10,7 @@ public class MainActivity extends DefualtActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.onDefaultCreate(savedInstanceState);
+        setSubtitle(getResources().getString(R.string.app_subtitle));
     }
 
     @Override

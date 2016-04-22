@@ -26,8 +26,9 @@ public abstract class DefualtActivity extends AppCompatActivity {
         setContentView(getLayoutResourceId());
 
         Toolbar toolbar = (Toolbar) findViewById(getToolbarResourceId());
-        setSupportActionBar(toolbar);
-        setSubtitle(getResources().getString(R.string.app_subtitle));
+        if(getSupportActionBar() == null) {
+            setSupportActionBar(toolbar);
+        }
 
         result = new DrawerBuilder()
                 .withActivity(this)
@@ -61,6 +62,10 @@ public abstract class DefualtActivity extends AppCompatActivity {
 
     public void setSubtitle(String text) {
         getSupportActionBar().setSubtitle(text);
+    }
+
+    public void setSubititle(int id) {
+        getSupportActionBar().setSubtitle(getResources().getString(id));
     }
 
     public abstract int getToolbarResourceId();

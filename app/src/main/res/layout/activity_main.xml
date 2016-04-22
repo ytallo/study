@@ -22,6 +22,5 @@
     </android.support.design.widget.AppBarLayout>
 
     <include android:id="@+id/content" layout="@layout/home_activity"/>
-             
 
 </LinearLayout>

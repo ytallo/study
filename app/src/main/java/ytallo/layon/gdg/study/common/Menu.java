@@ -22,7 +22,7 @@ public class Menu {
     public static final ItemMenu JAVA          = new ItemMenu("Java", new JavaActivity());
     public static final ItemMenu JAVASCRIPT    = new ItemMenu("Javascript", new Activity());
 
-    private static List<ItemMenu> all = Arrays.asList(C, C_MORE, C_SHARP, JAVA, JAVASCRIPT);
+    private static List<ItemMenu> all = Arrays.asList(JAVA);
 
     public static List<ItemMenu> getAll() {
         return all;
