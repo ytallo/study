@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Study</string>
     <string name="app_subtitle">Programming for life</string>
+    <string name="welcome">Bem-vindo</string>
+    <string name="app_description">Seja bem-vindo ao Study, seu mais novo ambiente de estudos sobre programação.</string>
+    <string name="app_tip">Escolha uma linguagem e vamos começar.</string>
 
     <string name="action_settings">Settings</string>
     <string name="java">Java</string>
@@ -10,17 +13,78 @@
     <string name="c_more">C++</string>
 
     <string name="types">Tipos primitivos e valores</string>
-    <string name="description_types">Como tipos primitivos entendemos aqueles tipos de informação mais usuais e básicos. São os habituais de outras linguagens de programação. Descreveremos algum dado para ter em conta em cada tipo.</string>
+    <string name="description_types">Como tipos primitivos entendemos aqueles tipos
+                    de informação mais usuais e básicos. São os habituais de outras linguagens de programação.
+                    Descreveremos algum dado para ter em conta em cada tipo.\n\n
+                    Boolean: Não é um valor numérico, só admite os valores true ou false.\n
+                    Char: Usa o código UNICODE e ocupa cada caractere 16 bits.\n
+                    Inteiros: Diferem nas precisões e podem ser positivos ou negativos.
+                    \n\t\tByte: 1 byte.
+                    \n\t\tShort: 2 bytes.
+                    \n\t\tInt: 4 bytes.
+                    \n\t\tLong: 8 bytes.
+                    \nReais em ponto flutuante: igual que os inteiros também diferem nas precisões e podem ser positivos ou negativos.
+                    \n\t\tFloat: 4 bytes.
+                    \n\t\tDouble: 8 bytes.
+    </string>
 
     <string name="decisions_struct">Estrutura de decisão</string>
+    <string name="description_decision_struct">
+        As estruturas de decisão são utilizadas para controlar o fluxo de execução dos aplicativos, possibilitando que a leitura das instruções siga caminhos alternativos em função da análise de determinadas condições. Com elas, é possível condicionar a leitura de uma instrução ou de um bloco delas a uma ou mais condições que precisam ser satisfeitas.
 
-    <string name="loops">Loops</string>
+        \n\n<b>Estrutura if</b>
+        \nA estrutura de decisão if é utilizada para impor uma ou mais condições que deverão ser satisfeitas para a execução de uma instrução ou bloco de instruções. A sua forma geral é a seguinte:
 
-    <string name="arrays">Arrays</string>
+        \n\nIf (&lt;condição&gt;) &lt;instrução ou bloco&gt;
+        \nA condição sempre irá figurar entre parênteses, após a palavra reservada if, e deve ser uma expressão booleana que resulte em um valor true ou false. A instrução ou o bloco de instruções somente será executado caso o resultado dessa expressão seja true. Caso o resultado seja false, o fluxo de execução será desviado e a instrução ou o bloco de instruções não será executado.
+
+        \n\nHavendo uma única instrução condicionada pela estrutura if, ela figura logo após a condição e termina com um ponto e vírgula. A sintaxe é a seguinte:
+
+        \nIf(&lt;Condição&gt;) &lt;Instrução&gt;;
+        \n\n<b>Estrutura if-else</b>
+        \nA estrutura de decisão if-else é uma variação da estrutura if. Ela é utilizada para impor uma ou mais condições que deverão ser satisfeitas para a execução de uma instrução ou bloco de instruções e possibilita a definição de uma instrução ou bloco de instruções a serem executados caso as condições não sejam satisfeitas. A sua forma geral é a seguinte:
+
+        \n\nIf(&lt;Condição&gt;) &lt;instrução ou bloco&gt;
+
+        \nelse &lt;instrução ou bloco&gt;
+        \n\nA condição sempre irá figurar entre parênteses, após a palavra reservada if, e deve ser uma expressão booleana que resulte em um valor true ou false. A primeira instrução ou o bloco de instruções somente será executado caso o resultado dessa expressão seja true. Caso o resultado seja false, o fluxo de execução será desviado e a instrução ou o bloco posterior ao else será executado.
+    </string>
+
+    <string name="variables">Variáveis</string>
+    <string name="description_variables">Agora que temos as peças necessárias ( identificadores e tipos ) podemos definir variáveis em Java. Uma variável referenciará sempre a um tipo primitivo de Java ou a qualquer outro objeto criado em nosso programa. Vejamos algumas declarações.
+        \nInt a ;  declaração de uma variável \'a\' iniciada a 0 (valor por padrão).
+        \nInt b = 8; declaração de uma variável \'b\' iniciada a 8.
+    </string>
 
     <string name="input">Entrada de dados</string>
+    <string name="description_input">
+        No Java, a partir do Java 1.5 ou J2SE 5, que recebeu o codinome "Tiger", está disponível a classe Scanner do pacote java.util. Essa classe implementa as operações de entrada de dados pelo teclado no console.
+        \nPara utilizar a classe Scanner em uma aplicação Java deve-se proceder da seguinte maneira:
+            \n\t\timportar o pacote java.util:
+        \nimport java.util.Scanner;
+            \n\t\tInstanciar e criar um objeto Scanner:
+        \nScanner ler = new Scanner(System.in);
+            \n\t\tLendo valores através do teclado:
+            \n\t\tLendo um valor inteiro:
+        \nint num;
 
-    <string name="welcome">Bem-vindo</string>
-    <string name="app_description">Seja bem-vindo ao Study, seu mais novo ambiente de estudos sobre programação.</string>
-    <string name="app_tip">Escolha uma linguagem e vamos começar.</string>
+        \nSystem.out.printf("Informe um número: ");
+        \nnum = ler.nextInt();
+    </string>
+
+    <string name="loops">Loops</string>
+    <string name="loop_while">
+        As estruturas de repetição também são conhecidas como laços (loops) e são utilizados para executar, repetidamente, uma instrução ou bloco de instrução enquanto determinada condição estiver sendo satisfeita.
+        \nQualquer que seja a estrutura de repetição, ela contém quatro elementos fundamentais: inicialização, condição, corpo e iteração. A inicialização compõe-se de todo código que determina a condição inicial da repetição. A condição é uma expressão booleana avaliada após cada leitura do corpo e determina se uma nova leitura deve ser feita ou se a estrutura de repetição deve ser encerrada. O corpo compõe-se de todas as instruções que são executadas repetidamente. A iteração é a instrução que deve ser executada depois do corpo e antes de uma nova repetição.
+        \n\n<b>While</b>
+        \nO termo while pode ser traduzido para o português como enquanto. Este termo é utilizado para construir uma estrutura de repetição que executa, repetidamente, uma única instrução ou um bloco delas “enquanto” uma expressão booleana for verdadeira.
+        \nVeja que a inicialização precede o início da repetição. Isso significa que você deve definir o estado inicial dos elementos que serão utilizados nesse laço antes de seu cabeçalho. A palavra reservada while sempre será seguida de um par de parênteses, que delimitam a condição desta estrutura de repetição. Essa condição deve ser uma expressão booleana e, enquanto ela for verdadeira, esta estrutura continuará executando as instruções contidas no seu corpo.
+    </string>
+    <string name="loop_for">
+        <b>Estrutura For</b>
+        \nO laço for é uma estrutura de repetição compacta. Seus elementos de inicialização, condição e iteração são reunidos na forma de um cabeçalho e o corpo é disposto em seguida.
+        \nVeja a sintaxe geral de uma estrutura for
+        \nObserve que a inicialização, condição e iteração aparecem, entre parênteses, após a palavra reservada “for” e elas são separadas apenas por um ponto-e-vírgula. A instrução ou bloco de instruções que este tipo de laço repete são transcritos a partir da linha subsequente ao seu cabeçalho.
+        \nO laço for e o laço while são apenas formas diferentes de uma mesma estrutura básica de repetição. Qualquer laço for pode ser transcrito em termos de um laço while e vice-versa. Do mesmo modo que em um laço while, se a condição de um laço for já é falsa logo na primeira avaliação que se fizer dela, as instruções contidas em seu corpo jamais serão executadas.
+    </string>
 </resources>
